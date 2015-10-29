@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - jsontask@localhost" uuid="2c147938-f9cf-48de-afb6-ae364cca6c74">
+    <data-source name="PostgreSQL - jsontask@localhost" uuid="2e6b1177-e36c-43f9-ad42-4cd0a507145a">
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <schema-pattern>jsontask.*</schema-pattern>
-      <default-schemas>jsontask.*</default-schemas>
+      <user-name>postgres</user-name>
+      <schema-pattern>jsontask.pg_catalog jsontask.public</schema-pattern>
+      <default-schemas>jsontask.pg_catalog jsontask.public</default-schemas>
     </data-source>
   </component>
 </project>

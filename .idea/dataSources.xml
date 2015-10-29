@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1206661899">
-    <data-source source="LOCAL" name="MySQL - jsontask@localhost" uuid="2c147938-f9cf-48de-afb6-ae364cca6c74">
-      <driver-ref>mysql</driver-ref>
+  <component name="DataSourceManagerImpl" format="xml" hash="2683986467">
+    <data-source source="LOCAL" name="PostgreSQL - jsontask@localhost" uuid="2e6b1177-e36c-43f9-ad42-4cd0a507145a">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/jsontask</jdbc-url>
-      <driver-properties>
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/jsontask</jdbc-url>
       <libraries />
     </data-source>
   </component>

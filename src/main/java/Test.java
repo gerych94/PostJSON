@@ -1,12 +1,9 @@
 
 import com.google.gson.Gson;
-import dao.ResponseDaoHibernate;
-import dao.ResponseDaoInterface;
 import model.ResponseFromServer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import service.IResponseService;
-import service.ResponseService;
 import utils.GetURLConnection;
 
 import java.io.IOException;
@@ -29,7 +26,7 @@ public class Test {
         ResponseFromServer response=new Gson().fromJson(stringBuilder.toString(), ResponseFromServer.class);
 
 
-        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("classpath:spring-config.xml");
+        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("classpath:app-context.xml");
         IResponseService responseService= (IResponseService) applicationContext.getBean("ResponseService");
         responseService.addData(response);
         connection.disconnect();
