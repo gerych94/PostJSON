@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - jsontask@localhost" uuid="2c147938-f9cf-48de-afb6-ae364cca6c74">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>jsontask.*</schema-pattern>
+      <default-schemas>jsontask.*</default-schemas>
+    </data-source>
+  </component>
+</project>

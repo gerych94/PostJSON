@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - jsontask@localhost" uuid="2c147938-f9cf-48de-afb6-ae364cca6c74">
+    <database-info product="MySQL" version="5.5.44-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="jsontask"/>
+    <table name="cities" schema="" catalog="jsontask" type="TABLE">
+      <column name="id_city" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cityName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="id_country" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_city"/>
+      <foreign-key name="cities_ibfk_1" columns="id_country" ref-table="countries" ref-schema="" ref-catalog="jsontask" ref-columns="id_country" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="countries" schema="" catalog="jsontask" type="TABLE">
+      <column name="id_country" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="countryName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="countryISOCode" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="id_response" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_country"/>
+      <foreign-key name="countries_ibfk_1" columns="id_response" ref-table="response" ref-schema="" ref-catalog="jsontask" ref-columns="id_response" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="cities_ibfk_1" table="cities" schema="" catalog="jsontask" columns="id_country"/>
+    </table>
+    <table name="response" schema="" catalog="jsontask" type="TABLE">
+      <column name="id_response" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="time" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="echo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_response"/>
+      <exported-key name="countries_ibfk_1" table="countries" schema="" catalog="jsontask" columns="id_response"/>
+    </table>
+  </data-source>
+</component>
